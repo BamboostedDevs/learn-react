@@ -32,7 +32,7 @@ const TestingHooks = ({ initialState = 0 }) => {
   });
 
   useEffect(() => {
-    //  on custom trigger, for example on change of state
+    //  on custom trigger, for example on change of variable "state"
     console.log("dupaaa");
   }, [state]);
 
