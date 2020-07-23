@@ -1,7 +1,7 @@
 import Head from "next/head";
 import TestingHooks, {
   _TestingHooks,
-  __TestingHooks
+  __TestingHooks,
 } from "../components/TestingHooks";
 
 const Home = () => (
@@ -18,7 +18,7 @@ const Home = () => (
 
       <p className="description">
         Get started by editing <code>pages/index.js</code>
-        <TestingHooks />
+        <TestingHooks initialState={6} />
         <_TestingHooks />
         <__TestingHooks />
       </p>

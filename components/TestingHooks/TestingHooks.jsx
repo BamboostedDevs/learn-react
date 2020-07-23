@@ -9,11 +9,13 @@ export const __TestingHooks = () => {
 };
 
 const TestingHooks = ({ initialState = 0 }) => {
-  const [state, setState] = useState(initialState);
+  const [count, setCount] = useState(initialState);
+  const [state, setState] = useState(9);
 
   //   [1]  componentDidMount && componentWillUnmount()
   useEffect(() => {
     //  componentDidMount()
+    setCount(Date.now());
     return () => {
       //    componentWillUnmount()
     };
@@ -31,9 +33,10 @@ const TestingHooks = ({ initialState = 0 }) => {
 
   useEffect(() => {
     //  on custom trigger, for example on change of state
+    console.log("dupaaa");
   }, [state]);
 
-  return <div>Default Export</div>;
+  return <div onClick={() => setState(state + 1)}>{String(count)}</div>;
 };
 
 export { _TestingHooks };
